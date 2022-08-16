@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
+import styled, { css } from "@emotion/styled";
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
-
+import Features from "./components/Features";
 const Contenedor = styled.div`
   height: 100vh;
   overflow: hidden;
@@ -17,13 +17,19 @@ const IntroShape = styled.div`
   clip-path: polygon(99% 0%, 61% 0%, 48% 100%, 99% 99%);
   background-color: crimson;
 `;
+
 function App() {
   return (
-    <Contenedor>
-      <Navbar />
-      <Intro />
-      <IntroShape />
-    </Contenedor>
+    <>
+      <Contenedor>
+        <Navbar />
+        <Intro />
+        <IntroShape />
+      </Contenedor>
+      <Contenedor>
+        <Features />
+      </Contenedor>
+    </>
   );
 }
 
