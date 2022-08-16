@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Woman from "../img/mujer.png";
+import AnimatedShape from "./AnimatedShape";
 const Contenedor = styled.div`
   height: calc(100vh - 50px);
   margin-top: 20px;
@@ -83,6 +84,7 @@ const Intro = () => {
       </Left>
       <Rigth>
         <Imagen src={Woman}></Imagen>
+        <AnimatedShape />
       </Rigth>
     </Contenedor>
   );
