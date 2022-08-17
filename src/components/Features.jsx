@@ -4,21 +4,34 @@ import Phone from "../img/handApp.png";
 import AnimatedShape from "./AnimatedShape";
 const Contenedor = styled.div`
   display: flex;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
 `;
 const Left = styled.div`
   width: 50%;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 const Right = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
 `;
 const Imagen = styled.img`
   width: 80%;
 `;
 const Tittle = styled.span`
   font-size: 60px;
+  @media only screen and (max-width: 480px) {
+    font-size: 50px;
+  }
 `;
 const SubTittle = styled.span`
   font-size: 24px;
