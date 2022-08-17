@@ -40,6 +40,16 @@ const ServicesShape = styled.div`
   clip-path: polygon(0% 0%, 33% 0%, 33% 100%, 0% 100%);
   background-color: #a834c9;
 `;
+const PriceShape = styled.div`
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(33% 0%, 100% 0%, 100% 100%, 67% 100%);
+  background-color: crimson;
+`;
 
 function App() {
   return (
@@ -59,6 +69,7 @@ function App() {
       </Contenedor>
       <Contenedor>
         <Price />
+        <PriceShape />
       </Contenedor>
     </>
   );

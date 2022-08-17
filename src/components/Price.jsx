@@ -6,13 +6,16 @@ const Contenedor = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 const Price = () => {
   return (
     <Contenedor>
-      <PriceCard />
+      <PriceCard price="10 " type="Basic Plan " />
+      <PriceCard price="24 " type="Premium Plan " />
+      <PriceCard price="100 " type="Advanced Plan " />
     </Contenedor>
   );
 };
-
+11;
 export default Price;
