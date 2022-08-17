@@ -6,13 +6,22 @@ import IconoImagen from "../img/play.png";
 const Contenedor = styled.div`
   display: flex;
   height: 100%;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 const Left = styled.div`
   width: 50%;
   position: relative;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 const Right = styled.div`
   width: 50%;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
 `;
 const Imagen = styled.img`
   display: ${(props) => props.open && "none"};
@@ -24,6 +33,10 @@ const Wrapper = styled.div`
   padding: 50px;
   flex-direction: column;
   /* margin-left: 20%; */
+  @media only screen and (max-width: 480px) {
+    padding: 20px;
+    /* width: ; */
+  }
 `;
 
 const Title = styled.h1``;
@@ -69,9 +82,14 @@ const Videoo = styled.iframe`
   bottom: 0;
   right: 0;
   margin: auto;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
 `;
+
 const Services = () => {
   const [open, setOpen] = useState(false);
+  const smallScreen = window.screen.width <= 412 ? true : false;
 
   return (
     <Contenedor>
@@ -92,17 +110,27 @@ const Services = () => {
             similique quaerat quos rerum quas expedita, assumenda corrupti
             veniam cupiditate placeat.
           </Descripcion>
+
           <CardComponente>
             <MiniCard></MiniCard>
             <MiniCard></MiniCard>
             <MiniCard></MiniCard>
           </CardComponente>
-          <Boton onClick={() => setOpen(true)}>
+          <Boton onClick={() => setOpen(!open)}>
             <Icono src={IconoImagen} />
             How its Works
           </Boton>
         </Wrapper>
       </Right>
+      {smallScreen ? (
+        <Videoo
+          autoPlay
+          open={open}
+          src="https://www.youtube.com/embed/rnrK3zxsKdA"
+        />
+      ) : (
+        ""
+      )}
     </Contenedor>
   );
 };

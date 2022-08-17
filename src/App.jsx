@@ -40,7 +40,7 @@ const ServicesShape = styled.div`
   position: absolute;
   z-index: -1;
   clip-path: polygon(0% 0%, 33% 0%, 33% 100%, 0% 100%);
-  background-color: #a834c9;
+  background-color: #f78397;
 `;
 const PriceShape = styled.div`
   width: 100%;
@@ -54,6 +54,8 @@ const PriceShape = styled.div`
 `;
 
 function App() {
+  const smallScreen = window.screen.width <= 412 ? true : false;
+
   return (
     <>
       <Contenedor>
@@ -67,7 +69,7 @@ function App() {
       </Contenedor>
       <Contenedor>
         <Services />
-        <ServicesShape />
+        {!smallScreen ? <ServicesShape /> : ""}
       </Contenedor>
       <Contenedor>
         <Price />
