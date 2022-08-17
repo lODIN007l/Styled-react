@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Phone from "../img/handApp.png";
+import AnimatedShape from "./AnimatedShape";
 const Contenedor = styled.div`
   display: flex;
 `;
@@ -71,6 +72,7 @@ const Features = () => {
         </Description>
         <Boton>Learn More</Boton>
       </Right>
+      <AnimatedShape />
     </Contenedor>
   );
 };
