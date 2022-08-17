@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { useState } from "react";
+import { useState } from "react";
 import Woman from "../img/woman.png";
 import MiniCard from "./MiniCard";
 import IconoImagen from "../img/play.png";
