@@ -10,6 +10,9 @@ const Wrapper = styled.div`
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 480px) {
+    padding: 10px;
+  }
 `;
 const List = styled.ul`
   padding: 0;
@@ -19,8 +22,16 @@ const List = styled.ul`
 `;
 const ListItem = styled.li`
   margin-right: 20px;
+  @media only screen and (max-width: 480px) {
+    margin-right: 10px;
+    font-size: 14px;
+  }
 `;
-const Copyright = styled.span``;
+const Copyright = styled.span`
+  @media only screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+`;
 
 const Footer = () => {
   return (
@@ -32,7 +43,7 @@ const Footer = () => {
           <ListItem>API</ListItem>
           <ListItem>Comunnity</ListItem>
         </List>
-        <Copyright>Wilson Lluilema -2022</Copyright>
+        <Copyright>Wilson Lluilema</Copyright>
       </Wrapper>
     </Contenedor>
   );
